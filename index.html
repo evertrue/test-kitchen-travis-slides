@@ -117,16 +117,15 @@
 
     <section class="slide">
         <div>
-            <h2>Code Samples</h2>
+            <h2>Gemfile to start</h2>
 
             <pre>
-                <code>&lt;!DOCTYPE html&gt;</code>
-                <code>&lt;html lang="en"&gt;</code>
-                <code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-                <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-                <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-                <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-                <code><mark>&lt;/head&gt;</mark></code>
+                <code>  <mark>gem 'berkshelf',       '~> 3.1'</mark></code>
+                <code>  <mark>gem 'chefspec',        '~> 4.0'</mark></code>
+                <code>  gem 'foodcritic',      '~> 3.0'</code>
+                <code>  <mark class="important">gem 'test-kitchen',    '~> 1.2'</mark></code>
+                <code>  gem 'kitchen-vagrant', '~> 0.14'</code>
+                <code>  <mark class="important">gem 'kitchen-ec2',     github: 'test-kitchen/kitchen-ec2'</mark></code>
             </pre>
         </div>
     </section>
