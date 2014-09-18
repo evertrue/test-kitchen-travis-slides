@@ -189,6 +189,65 @@
             <h2>Don’t Panic</h2>
         </div>
     </section>
+
+    <section class="slide">
+        <div>
+            <h2>Test Kitchen using EC2</h2>
+
+            <pre>
+                <code>driver:</code>
+                <code>  name: ec2</code>
+                <code>  aws_access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %></code>
+                <code>  aws_secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %></code>
+                <code>  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR_NAME'] %></code>
+                <code>  ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %></code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>More TK Config</h2>
+
+            <pre>
+                <code>driver:</code>
+                <code>[…]</code>
+                <code>  region: us-east-1</code>
+                <code>  availability_zone: us-east-1b</code>
+                <code>  security_group_ids: ['ci-testing']</code>
+                <code>  interface: public</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>More TK Config</h2>
+
+            <p>Chef Zero helps especially if dealing with data bags.</p>
+
+            <pre>
+                <code>provisioner:</code>
+                <code>  name: chef_zero</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Yet More TK Config</h2>
+
+            <pre>
+                <code>platforms:</code>
+                <code>  - name: ubuntu-12.04</code>
+                <code>    driver_config:</code>
+                <code>      image_id: ami-36aa4d5e</code>
+                <code>      tags:</code>
+                <code>        Name: travis-ci-default-ubuntu-1204</code>
+                <code>        Env: public</code>
+            </pre>
+        </div>
+    </section>
     <div class="progress"><div></div></div>
     <script src="shower/shower.min.js"></script>
     <!-- © 2014 EverTrue -->
