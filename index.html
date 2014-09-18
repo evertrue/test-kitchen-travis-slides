@@ -121,6 +121,22 @@
         </div>
     </section>
 
+    <section class="slide">
+        <div>
+            <h2>Unit Tests</h2>
+
+            <pre>
+                <code>require 'spec_helper'</code>
+                <code> </code>
+                <code>describe 'et_travis_demo::default' do</code>
+                <code>  let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }</code>
+                <code>  it 'creates the file /tmp/travis_lives' do</code>
+                <code>    expect(chef_run).to create_file '/tmp/travis_lives</code>
+                <code>  end</code>
+                <code>end</code>
+            </pre>
+        </div>
+    </section>
     <div class="progress"><div></div></div>
     <script src="shower/shower.min.js"></script>
     <!-- © 2014 EverTrue -->
