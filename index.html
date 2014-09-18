@@ -150,11 +150,11 @@
             <p>Test that you got what you wanted</p>
 
             <pre>
-                <code>describe 'Nginx' do</code>
-                <code>  describe service 'nginx' do</code>
-                <code>    it { should be_enabled }</code>
-                <code>    it { should be_running }</code>
+                <code>describe 'Travis Test Cookbook' do</code>
+                <code>  describe file('/tmp/travis_lives') do</code>
+                <code>    its(:content) { should match("Some content to watch for.\n") }</code>
                 <code>  end</code>
+                <code>end</code>
             </pre>
         </div>
     </section>
